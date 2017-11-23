@@ -1,11 +1,12 @@
 @import "assets/css/0-tools/bourbon/bourbon";
 @import "assets/css/0-tools/normalize";
+@import "assets/css/0-tools/_vars";
 @import "assets/css/0-tools/_vars.sass";
-@import "assets/css/0-tools/_vars.sass";
 
 
 
-@import "assets/css/1-base/body-element";
+@import "assets/css/1-base/body-element.sass";
 @import "assets/css/1-base/links";
 @import "assets/css/1-base/selection-colors";
 @import "assets/css/1-base/typography";
+@import "assets/css/1-base/colors";
