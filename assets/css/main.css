@@ -390,7 +390,7 @@ template {
   display: none; }
 
 body {
-  background-color: #verySoftBlue;
+  background-color: #f4c2c2;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
   color: #666;
@@ -471,3 +471,82 @@ hr {
   clear: both;
   margin: 10px 0 30px;
   height: 0; }
+
+.home-wrap {
+  height: 100vh;
+  background-image: url(/assets/img/home-bg.JPG);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 15px 1000px 15px;
+  border-radius: 10px; }
+  .home-wrap header {
+    height: 120px;
+    top: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin: 0;
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    left: 0; }
+    .home-wrap header nav.home {
+      -ms-flex-order: 2;
+          order: 2; }
+      .home-wrap header nav.home ul {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+    .home-wrap header .header-info {
+      -ms-flex-order: 1;
+          order: 1;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+      .home-wrap header .header-info .logo {
+        -ms-flex-order: 2;
+            order: 2;
+        text-align: center;
+        display: inline-block;
+        margin: 0;
+        padding: 0; }
+        .home-wrap header .header-info .logo h1 {
+          margin: 0;
+          text-align: center;
+          padding: 0;
+          margin: 0; }
+      .home-wrap header .header-info .lang {
+        width: 20%;
+        -ms-flex-order: 3;
+            order: 3;
+        display: inline-block;
+        left: 0px; }
+        .home-wrap header .header-info .lang ul {
+          margin: 0 10px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: row;
+              flex-direction: row;
+          list-style: none; }
+          .home-wrap header .header-info .lang ul li {
+            margin: 0 10px; }
+      .home-wrap header .header-info .contacts {
+        width: 20%;
+        display: inline-block;
+        -ms-flex-order: 1;
+            order: 1; }
+        .home-wrap header .header-info .contacts ul {
+          list-style: none;
+          padding: 0 10px;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: row;
+              flex-direction: row;
+          margin: 0 10px; }
+          .home-wrap header .header-info .contacts ul li {
+            margin: 0 10px; }
