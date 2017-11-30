@@ -1,10 +1,15 @@
 .wrap.photography
-  height: 100vh
+  opacity: 0.1
+  height: (100vh -150px)
   width: 100vw
   background:
-    image: url(/assets/img/photography.JPG)
     repeat: no-repeat
     position: center
     size: cover
+  background-color: white
 
   .photography-module
+
+@media(max-width: 888px)
+  .wrap.photography
+    height: 60vh
