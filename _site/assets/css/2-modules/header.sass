@@ -208,7 +208,7 @@ $main-bg-color: rgb(250,227,227)
         span::after
           content: ""
           display: block
-          height: 3px
+          height: 2px
           width: 100%
           background: $main-font-color
           margin: 0
@@ -224,13 +224,14 @@ $main-bg-color: rgb(250,227,227)
         &.is-open span
           background: transparent
 
-        &is-open span::before,
-        &is-open span::after
+        &.is-open span::before
           transform-origin: center
           transform: rotate(45deg)
-          top: 0
-        &is-open span::after
+          top: 1px
+        &.is-open span::after
+          transform-origin: center
           transform: rotate(-45deg)
+          top: -1px
 
       .header-wrap
         //display: none
