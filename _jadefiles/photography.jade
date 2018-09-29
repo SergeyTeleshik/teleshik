@@ -1,4 +1,22 @@
-.wrap.photography#photography
-  .photography-module
-    nav.albums
-    .vilnius-album-containter
+.photography-wrap
+  .slider-wrap 
+    .slide
+      img(src = 'assets/img/smena1.JPG')
+    .slide
+      img(src = 'assets/img/smena2.JPG')
+    .slide
+      img(src = 'assets/img/smena3.JPG')
+    .slide
+      img(src = 'assets/img/smena4.JPG')
+    .slide
+      img(src = 'assets/img/smena5.JPG')
+    .slide
+      img(src = 'assets/img/smena6.JPG')
+    //dots
+    .dots-wrap
+      span(class = 'dot', onclick = 'showSlides(slideIndex=1)')
+      span(class = 'dot', onclick = 'showSlides(slideIndex=2)' )
+      span(class = 'dot', onclick = 'showSlides(slideIndex=3)')
+      span(class = 'dot', onclick = 'showSlides(slideIndex=4)')
+      span(class = 'dot', onclick = 'showSlides(slideIndex=5)')
+      span(class = 'dot', onclick = 'showSlides(slideIndex=6)')
