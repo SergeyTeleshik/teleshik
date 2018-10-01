@@ -1,16 +1,11 @@
 .photography-wrap
+  // display: none
   .slider-wrap
     max-width: 1000px
     margin: auto
     .slide
       display: none
       text-align: center
-      .slide-number
-        display: inline-block
-        color: lightpink
-        font-size: 15px
-        padding-top: 5px
-        padding-bottom: 5px
 
       img
         height: auto
@@ -24,12 +19,14 @@
         width: 15px
         margin-right: 10px
         background-color: lightpink
-        display: none
+        display: inline-block
         border-radius: 50%
         transition: background-color 0.6 ease
 
       .active, .dot:hover
         background-color: white
+
+
 
 @media(max-width: 888px)
   .photography-wrap
