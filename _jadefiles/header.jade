@@ -1,16 +1,20 @@
-mixin nav-home-content()
+mixin  nav-home-content()
   ul
-    li: a(href="#photography") Photography
+    li Photography
+      ul(class='drop-menu menu-1')
+        li smena
+        li zenit
+        li paris
     li: a(href="#barbering") Barbering
     li: a(href="#webdevelopment") WebDevelopment
-  
+
 mixin lang()
   .lang
     ul
       li: a(href="en") EN
       li /
       li: a(href="ru") RU
-      
+
 mixin logo()
   .logo
     h1 TELESHIK
@@ -28,25 +32,23 @@ header
     .nav-home-wrap
       nav.home
         +nav-home-content()
-      
-    .header-info    
+
+    .header-info
       .contacts
         ul
-          li: a(href="https://github.com/SergeyTeleshik") 
+          li: a(href="https://github.com/SergeyTeleshik")
             .a
-          li: a(href="https://vk.com/wgate") 
+          li: a(href="https://vk.com/wgate")
             .a
-          li: a(href="https://www.instagram.com/teleshik/") 
+          li: a(href="https://www.instagram.com/teleshik/")
             .a
-          li: a(href="https://twitter.com/teleshik") 
+          li: a(href="https://twitter.com/teleshik")
             .a
-          li: a(href="https://www.facebook.com/ts.ts.smp") 
+          li: a(href="https://www.facebook.com/ts.ts.smp")
             .a
-          li: a(href="https://github.com/SergeyTeleshik") 
+          li: a(href="https://plus.google.com/u/0/110536837233311100180")
             .a
-        
+
+
       +logo()
-
       +lang()
-
-    

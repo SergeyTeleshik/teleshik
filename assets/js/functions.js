@@ -1,7 +1,8 @@
 $(function() {
-  mobileNav();
-}); 
-
+  mobileNav()
+  photographyToggle()
+});
+//NAV TOGGLE
 function mobileNav() {
   $('.home-menu-button').on('click', function(){
     var status = $(this).hasClass('is-open');
@@ -9,6 +10,8 @@ function mobileNav() {
     else { $('.home-menu-button, .mobile-nav-home').addClass('is-open'); }
   });
 }
+//PHOTOGRAPHY TOGGLE
+
 
 
 //Pure JS
@@ -22,8 +25,9 @@ let showSlides = x => {
       slides[i].style.display = "none"
   }
   for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace("active", "")
+     dots[i].className = dots[i].className.replace("active", "")
   }
   slides[slideIndex-1].style.display = "block"
   dots[slideIndex-1].className += " active"
 }
+showSlides(slideIndex)

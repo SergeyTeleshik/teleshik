@@ -1,6 +1,9 @@
 $main-font-color: rgb(220,61,61)
 $main-bg-color: rgb(250,227,227)
 
+
+
+
 .home-wrap
   height: 100vh
   width: 100vw
@@ -38,8 +41,8 @@ $main-bg-color: rgb(250,227,227)
           padding: 0 5px
 
   header
-    background-color: $main-bg-color
-    height: 120px
+    background-color: rgba(250,227,227,0.7)
+    height: 110px
     margin: 0
     width: 100vw
 
@@ -49,21 +52,92 @@ $main-bg-color: rgb(250,227,227)
     .home-menu-button
       display: none
 
+    // WHOLE HEADER
     .header-wrap
       display: flex
       flex-direction: column
 
+      // NAVIGATION PANEL
       .nav-home-wrap
         order: 2
         nav.home
-          ul
+          text-align: center
+          padding: 5px
+          > ul
             list-style: none
-            display: flex
-            flex-direction: row
-            justify-content: space-around
+            display: inline-block
             padding: 0
+            margin: 0
+
+            > li
+              color: $main-font-color
+              cursor: pointer
+              position: relative
+              float: left
+              width: 150px
+              height: 30px
+              line-height: 30px
+              margin: 0 30px
+              background: white
+              border-radius: 5px
+              &:hover
+                border-radius: 5px 5px 0 0
+
+              &:hover > ul.drop-menu li
+                  display: list-item
+                  background: lightgrey
+              &:hover > ul.drop-menu.menu-1
+                perspective: 1000px
+
+                li
+                  opacity: 0
+                  @for $i from 1 to 6
+                    &:nth-child(#{$i})
+                      animation:
+                        name: menu1
+                        duration: 300ms
+                        delay: (100ms * $i) - 100ms
+                        timing-function: ease-in-out
+                        fill-mode: forwards
+
+                  @keyframes menu1
+                    0%
+                      opacity: 0
+                      transform: rotateY(-90deg)
+                    20%
+                      opacity: 1
+                    100%
+                      opacity: 1
+                      transform: rotateY(0deg)
 
 
+              ul.drop-menu
+                position: absolute
+                top: 100%
+                left: 0%
+                width: 100%
+                padding: 0
+
+                li
+                  //background: #666
+                  color: black
+                  margin: 0
+                  list-style: none
+
+                  &:hover
+                    background: #606060
+                  &:last-child
+                    border-radius: 0px 0px 5px 5px
+
+              ul.drop-menu li
+                display: none
+
+
+
+
+
+
+      // CONTACTS LOGO AND LANG
       .header-info
         order: 1
         display: flex
@@ -77,6 +151,7 @@ $main-bg-color: rgb(250,227,227)
           padding: 0
 
           h1
+            font-size: 50px
             margin: 0
             padding: 0
             margin: 0
@@ -129,7 +204,7 @@ $main-bg-color: rgb(250,227,227)
                 a
                   .a
                       background:
-                        image: url(/assets/img/facebook.svg)
+                        image: url(/assets/img/github.svg)
 
               &:nth-child(2)
                 a

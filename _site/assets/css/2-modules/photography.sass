@@ -1,16 +1,11 @@
-.photography-wrap 
+.photography-wrap
+  // display: none
   .slider-wrap
     max-width: 1000px
     margin: auto
     .slide
       display: none
       text-align: center
-      .slide-number
-        display: inline-block
-        color: lightpink
-        font-size: 15px
-        padding-top: 5px
-        padding-bottom: 5px
 
       img
         height: auto
@@ -19,7 +14,6 @@
     .dots-wrap
       text-align: center
       .dot
-        display: none
         cursor: pointer
         height: 15px
         width: 15px
@@ -31,6 +25,9 @@
 
       .active, .dot:hover
         background-color: white
+
+.is-active
+  display: block
 
 @media(max-width: 888px)
   .photography-wrap
